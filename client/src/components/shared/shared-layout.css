@@ -1,0 +1,148 @@
+.navigation {
+  padding: 10px;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* LOGO */
+.logo {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.logo > img {
+  width: 20px;
+  margin-bottom: -5px;
+}
+
+.logo > p {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--primary-blue);
+}
+
+/* NAV */
+.nav-center > nav > span {
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+
+.nav-center > nav > aside:first-of-type {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000063;
+}
+
+.nav-center > nav > aside:first-of-type.open-nav {
+  display: flex;
+}
+
+.nav-center > nav > aside:last-of-type {
+  position: absolute;
+  top: 0;
+  left: -900px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms ease;
+}
+
+.nav-center > nav > aside:last-of-type.open-nav {
+  left: 0;
+}
+
+.nav-center > nav > aside:last-of-type > a {
+  text-decoration: none;
+  line-height: 40px;
+  color: white;
+  padding: 0 15px;
+}
+
+.nav-center > nav > aside:last-of-type > a:last-of-type {
+  background-color: white;
+  color: var(--primary-blue);
+  width: 70%;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+/* NAV ITEMS */
+.nav-center > nav > aside:last-of-type > article {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center > nav > aside:last-of-type > article > span {
+  font-size: 20px;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+/* TABLET SCREEN */
+@media screen and (min-width: 700px) {
+  .nav-center {
+    width: 90%;
+  }
+  .nav-center > .logo > img {
+    width: 30px;
+  }
+  .nav-center > .logo > p {
+    font-size: 30px;
+  }
+}
+
+/* DESKTOP SCREEN */
+@media screen and (min-width: 1100px) {
+  .nav-center {
+    max-width: 1310px;
+  }
+  .nav-center > .logo > img {
+    width: 35.2px;
+  }
+  .nav-center > .logo > p {
+    font-size: 35.15px;
+  }
+  .nav-center > nav > span {
+    display: none;
+  }
+  .nav-center > nav > aside:first-of-type {
+    display: unset;
+    width: unset;
+  }
+  .nav-center > nav > aside:last-of-type {
+    position: unset;
+    height: unset;
+    width: unset;
+    flex-direction: row;
+    background-color: unset;
+    column-gap: 20px;
+  }
+  .nav-center > nav > aside:last-of-type > a {
+    color: var(--primary-black);
+  }
+  .nav-center > nav > aside:last-of-type > article {
+    display: none;
+  }
+  .nav-center > nav > aside:last-of-type > a:last-of-type {
+    margin-left: unset;
+    width: unset;
+    background-color: var(--primary-blue);
+    color: white;
+  }
+}
