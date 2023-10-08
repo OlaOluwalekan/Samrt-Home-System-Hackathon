@@ -6,9 +6,9 @@ const NaviLink = ({ path, text }) => {
   const dispatch = useDispatch()
 
   return (
-    <Link to={path} onClick={() => dispatch(toggleNav(false))}>
+    <a href={path} onClick={() => dispatch(toggleNav(false))}>
       {text}
-    </Link>
+    </a>
   )
 }
 export default NaviLink

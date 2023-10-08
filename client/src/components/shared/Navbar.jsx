@@ -35,10 +35,10 @@ const Navbar = () => {
               </span>
             </article>
             <NaviLink path='#' text='Home' />
-            <NaviLink path='#' text='About Us' />
-            <NaviLink path='#' text='Reviews' />
+            <NaviLink path='#about' text='About Us' />
+            <NaviLink path='#testimonials' text='Reviews' />
             <NaviLink path='#' text='Contact Us' />
-            <NaviLink path='#' text='Download app' />
+            <NaviLink path='#download' text='Download app' />
           </aside>
         </nav>
       </div>
