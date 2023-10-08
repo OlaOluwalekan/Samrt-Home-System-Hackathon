@@ -1,0 +1,84 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    font-size: 50px;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.grid-item {
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+
+.grid-item>section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content>article {
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.image {
+    width: 62px;
+    height: 62px;
+     top: 142px;
+    left: 30px;
+    margin-right: 10px;
+}
+
+.content>article>p {
+    margin: 2px 0;
+}
+
+.content>article>p:first-of-type {
+    color: black;
+}
+
+.content>article>p:last-of-type {
+    color: gray;
+}
+
+
+.content>span {
+    display: flex;
+    font-weight: 900;
+    color: #61B2E4;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0;
+    }
+
+    .container> :nth-child(even) {
+        margin-top: 50px;
+    }
+
+        .container> :nth-child(odd) {
+            margin-bottom: 50px;
+        }
+}
