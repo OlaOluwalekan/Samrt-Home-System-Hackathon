@@ -5,10 +5,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
   --primary-blue: #48cae4;
   --primary-black: #000;
   --primary-white: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
