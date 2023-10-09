@@ -38,9 +38,9 @@ export default function AnimatedText({ text, colors = [], className = '' }) {
   });
 
   return (
-    <div ref={ref} className=" mx-auto pt-0 py-2 flex items-center overflow-hidden justify-center text-center">
+    <div ref={ref} className="mx-auto pt-0 py-2 flex items-center overflow-hidden justify-center text-center mt-16">
       <motion.h1
-        className={`inline-block w-full  text-[#0f0e0ee6] font-bold capitalize text-2xl md:text-4xl leading-10   ${className}`}
+          className={`inline-block w-full  text-[#0f0e0ee6] font-bold capitalize text-2xl md:text-4xl leading-10   ${className}`}
         variants={qoute}
         initial="initial"
         animate={inView ? 'animate' : 'initial'}

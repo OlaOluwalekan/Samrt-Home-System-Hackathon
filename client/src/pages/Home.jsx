@@ -1,6 +1,7 @@
 import Hero from '../components/hero/Hero'
 import About from '../components/about/About'
 import Testimonial from '../components/testimonial/Testimonial'
+import Download from '../components/download/Download'
 
 const Home = () => {
   return (
@@ -16,6 +17,10 @@ const Home = () => {
 
 
       {/* APP DOWNLOAD SECTION BELOW */}
+
+      
+      <Download />
+      
     </div>
   )
 }

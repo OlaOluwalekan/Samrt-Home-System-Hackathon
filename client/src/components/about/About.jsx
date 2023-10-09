@@ -1,19 +1,16 @@
 // YourComponent.jsx
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import FrameOne from '../../assets/Frame-1.jpg'
 import FrameTwo from '../../assets/Frame-2.jpg'
 import FrameThree from '../../assets/Frame-3.jpg'
 import './about.css'
 import AnimatedText from './AnimatedText'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+
 
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  const [ref, inView] = useInView({
-    triggerOnce: false, // Only trigger once when the image enters the viewport
-  })
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,17 +27,10 @@ const About = () => {
   // Large screen JSX
   const largeScreenJSX = (
     <>
-      <motion.div
-        ref={ref} // Attach the ref to the component
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate only when in view
-        transition={{ duration: 0.5 }}
-        className='main'
-        id='about'
-      >
+      <div className='main'>
         {/* First section with text on the left and image on the right */}
         <div className='container'>
-          <div className='text-section'>
+          <div className='text-section text-section-one'>
             <h2>About Us</h2>
             <p>
               Welcome to Oversee Homes, your trusted partner in smart home
@@ -49,14 +39,14 @@ const About = () => {
               the way people live in their homes.
             </p>
           </div>
-          <div className='image-section'>
+          <div className='image-section img-one'>
             <img src={FrameOne} alt='a team in a meeting' />
           </div>
         </div>
 
         {/* Second section with text on the right and image on the left */}
         <div className='container'>
-          <div className='image-section'>
+          <div className='image-section img-two'>
             <img src={FrameTwo} alt='another team in a meeting' />
           </div>
           <div className='text-section text-section-two'>
@@ -73,7 +63,7 @@ const About = () => {
 
         {/* Third section with text on the left and image on the right */}
         <div className='container'>
-          <div className='text-section'>
+          <div className='text-section text-section-three'>
             <h2>Our mission</h2>
             <p>
               Our mission is simple yet powerful: to empower homeowners to take
@@ -84,7 +74,7 @@ const About = () => {
               everyone
             </p>
           </div>
-          <div className='image-section'>
+          <div className='image-section img-three'>
             <img src={FrameThree} alt='yet another team in a meeting' />
           </div>
         </div>
@@ -92,20 +82,15 @@ const About = () => {
           text='Step into a Smarter, Safer, and more Connected Home'
           className='animated-text'
         />
-      </motion.div>
+      </div>
     </>
   )
 
   // Small screen JSX
   const smallScreenJSX = (
     <>
-      <motion.div
-        ref={ref} // Attach the ref to the component
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate only when in view
-        transition={{ duration: 0.5 }}
+      <div
         className='main'
-        id='about'
       >
         {/* Stacked layout for small screens */}
         <div className='container'>
@@ -155,7 +140,7 @@ const About = () => {
             <img src={FrameThree} alt='yet another team in a meeting' />
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   )
 
