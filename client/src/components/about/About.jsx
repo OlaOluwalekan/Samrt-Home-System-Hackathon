@@ -7,10 +7,8 @@ import FrameThree from '../../assets/Frame-3.jpg'
 import './about.css'
 import AnimatedText from './AnimatedText'
 
-
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
- 
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,9 +25,9 @@ const About = () => {
   // Large screen JSX
   const largeScreenJSX = (
     <>
-      <div className='main'>
+      <div className='about' id='about'>
         {/* First section with text on the left and image on the right */}
-        <div className='container'>
+        <div className='about-container'>
           <div className='text-section text-section-one'>
             <h2>About Us</h2>
             <p>
@@ -45,7 +43,7 @@ const About = () => {
         </div>
 
         {/* Second section with text on the right and image on the left */}
-        <div className='container'>
+        <div className='about-container'>
           <div className='image-section img-two'>
             <img src={FrameTwo} alt='another team in a meeting' />
           </div>
@@ -62,7 +60,7 @@ const About = () => {
         </div>
 
         {/* Third section with text on the left and image on the right */}
-        <div className='container'>
+        <div className='about-container'>
           <div className='text-section text-section-three'>
             <h2>Our mission</h2>
             <p>
@@ -78,10 +76,10 @@ const About = () => {
             <img src={FrameThree} alt='yet another team in a meeting' />
           </div>
         </div>
-        <AnimatedText
+        {/* <AnimatedText
           text='Step into a Smarter, Safer, and more Connected Home'
           className='animated-text'
-        />
+        /> */}
       </div>
     </>
   )
@@ -89,11 +87,9 @@ const About = () => {
   // Small screen JSX
   const smallScreenJSX = (
     <>
-      <div
-        className='main'
-      >
+      <div className='about' id='about'>
         {/* Stacked layout for small screens */}
-        <div className='container'>
+        <div className='about-container'>
           <div className='text-section'>
             <h2>About Us</h2>
             <p>
@@ -108,7 +104,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className='container'>
+        <div className='about-container'>
           <div className='text-section '>
             <h2>Who we are</h2>
             <p>
@@ -124,7 +120,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className='container'>
+        <div className='about-container'>
           <div className='text-section'>
             <h2>Our mission</h2>
             <p>

@@ -1,9 +1,9 @@
-h2 {
+.testimonial-head {
   text-align: center;
   margin-top: 12rem;
 }
 
-.container {
+.testimonial-container {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
@@ -82,16 +82,16 @@ h2 {
 }
 
 @media screen and (min-width: 700px) {
-  .container {
+  .testimonial-container {
     grid-template-columns: 1fr 1fr;
     row-gap: 0;
   }
 
-  .container > :nth-child(even) {
+  .testimonial-container > :nth-child(even) {
     margin-top: 50px;
   }
 
-  .container > :nth-child(odd) {
+  .testimonial-container > :nth-child(odd) {
     margin-bottom: 50px;
   }
 }
