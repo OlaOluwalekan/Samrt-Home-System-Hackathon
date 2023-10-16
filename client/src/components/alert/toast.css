@@ -1,0 +1,50 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  background: white;
+  border-radius: 2px;
+}
+
+.toast.success {
+  border: 1px solid var(--primary-blue);
+}
+
+.toast.error {
+  border: 1px solid red;
+}
+
+.toast > p {
+  padding: 5px 20px 5px 5px;
+}
+
+.toast.success > p {
+  color: var(--primary-blue);
+}
+
+.toast.error > p {
+  color: red;
+}
+
+.toast > article {
+  width: 100%;
+  height: 3px;
+  animation: drain 2s linear;
+}
+
+.toast.success > article {
+  background-color: var(--primary-blue);
+}
+
+.toast.error > article {
+  background-color: red;
+}
+
+@keyframes drain {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
