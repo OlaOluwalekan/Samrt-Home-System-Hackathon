@@ -34,10 +34,11 @@ const Navbar = () => {
                 <FaTimes />
               </span>
             </article>
-            <NaviLink path='#' text='Home' />
+            <NaviLink path='/' text='Home' />
             <NaviLink path='#about' text='About Us' />
             <NaviLink path='#testimonials' text='Reviews' />
-            <NaviLink path='/contact-us' text='Contact Us' /> {/* Updated the path */}
+            <NaviLink path='/contact-us' text='Contact Us' />{' '}
+            {/* Updated the path */}
             <NaviLink path='#download' text='Download app' />
           </aside>
         </nav>
