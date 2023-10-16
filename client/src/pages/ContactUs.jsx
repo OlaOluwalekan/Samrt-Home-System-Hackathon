@@ -1,7 +1,7 @@
 // ContactUs.js
 import axios from 'axios'
 import './contact-layout.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleToast } from '../features/generalSlice'
 
@@ -18,6 +18,10 @@ const ContactUs = () => {
   const [buttonMessage, setButtonMessage] = useState('Send Message.')
   const [loading, setIsLoading] = useState(false)
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    document.title = `Oversee Homes | Contact Us`
+  }, [])
 
   const onSubmit = async (e) => {
     e.preventDefault()
