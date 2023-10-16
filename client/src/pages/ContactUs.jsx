@@ -46,6 +46,7 @@ const ContactUs = () => {
           type: 'success',
         })
       )
+      setFormState(initialForm)
       setTimeout(() => {
         dispatch(toggleToast({ state: false, message: '' }))
       }, 2000)
