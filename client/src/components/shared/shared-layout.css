@@ -188,9 +188,11 @@
 .footer-center > .subscribe > form > button {
   padding: 8px;
   background: var(--primary-white);
+  color: var(--primary-blue);
   border: none;
   border-radius: 5px;
   max-width: 400px;
+  cursor: pointer;
 }
 
 .footer-center > .partners > div > article {

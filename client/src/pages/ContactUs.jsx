@@ -78,7 +78,7 @@ const ContactUs = () => {
         Got a question or proposal? Feel free to reach out.
       </div>
       <div>
-        <form onSubmit={onSubmit}>
+        <form className='contact-form' onSubmit={onSubmit}>
           <div className='input-row'>
             <div className='side'>
               <label htmlFor='name'>Your Name</label>

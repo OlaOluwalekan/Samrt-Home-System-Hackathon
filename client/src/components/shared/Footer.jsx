@@ -3,13 +3,17 @@ import NaviLink from './NaviLink'
 import { contactInfo, partners } from './shared-data'
 
 const Footer = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <footer className='footer'>
       <div className='footer-center'>
         {/* SUBSCRIBE */}
         <section className='subscribe'>
           <h3>Subscribe to our updates</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor='email'>Email address</label>
             <input type='email' name='email' id='email' />
             <button type='submit'>SUBSCRIBE</button>
